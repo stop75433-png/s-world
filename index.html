@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="fa">
+<html lang="fa" dir="rtl">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,9 +9,18 @@
 
 <style>
 
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Tahoma;
+}
+
 body{
 
-margin:0;
+background:linear-gradient(#fcf9ff,#f3ebff);
+
+height:100vh;
 
 display:flex;
 
@@ -18,27 +28,101 @@ justify-content:center;
 
 align-items:center;
 
-height:100vh;
+}
 
-background:#F8F3FF;
+.card{
 
-font-family:tahoma;
+background:white;
+
+width:360px;
+
+padding:45px;
+
+border-radius:35px;
+
+box-shadow:0 15px 40px rgba(0,0,0,.12);
+
+text-align:center;
+
+animation:fade 1s;
+
+}
+
+.logo{
+
+font-size:90px;
+
+color:#9d70d6;
+
+font-weight:bold;
+
+margin-bottom:15px;
 
 }
 
 h1{
 
-font-size:50px;
+color:#7b55c3;
 
-color:#8D63C7;
+margin-bottom:15px;
 
 }
 
 p{
 
-font-size:20px;
+color:#666;
 
-color:#777;
+line-height:30px;
+
+margin-bottom:35px;
+
+}
+
+button{
+
+background:#9d70d6;
+
+color:white;
+
+border:none;
+
+padding:16px 35px;
+
+font-size:18px;
+
+border-radius:50px;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+button:hover{
+
+background:#8857cf;
+
+transform:scale(1.05);
+
+}
+
+@keyframes fade{
+
+from{
+
+opacity:0;
+
+transform:translateY(40px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
 
 }
 
@@ -48,15 +132,30 @@ color:#777;
 
 <body>
 
-<div align="center">
+<div class="card">
 
-<h1>S World 💜</h1>
+<div class="logo">S</div>
+
+<h1>S World</h1>
 
 <p>
 
-به دنیای سوگند خوش اومدی 🌻
+🌻
+
+به دنیای سوگند خوش اومدی
+
+<br><br>
+
+اینجا قراره خاطره‌ها،
+آرزوها و روزهای قشنگت زندگی کنن.
 
 </p>
+
+<button onclick="alert('نسخه بعدی: درِ خانه باز می‌شود 🚪💜')">
+
+ورود به دنیای سوگند
+
+</button>
 
 </div>
 
