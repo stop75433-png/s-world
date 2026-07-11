@@ -2,15 +2,13 @@
 <html lang="fa" dir="rtl">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-
-<title>S World</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>خانه سوگند</title>
 
 <style>
-
 body{
 margin:0;
-background:#f4eefb;
+background:#F5F0FF;
 display:flex;
 justify-content:center;
 align-items:center;
@@ -19,19 +17,35 @@ font-family:tahoma;
 }
 
 img{
-width:320px;
-border-radius:30px;
-box-shadow:0 0 35px rgba(150,80,220,.35);
+width:90%;
+max-width:420px;
+cursor:pointer;
+transition:.5s;
 }
 
+img:hover{
+transform:scale(1.03);
+}
 </style>
 
 </head>
 
 <body>
 
-<img src="file_000000001ef47246a001ae12f0955ef4.png">
+<img
+id="door"
+src="file_000000001ef47246a001ae12f0955ef4.png"
+onclick="openDoor()">
+
+<script>
+function openDoor(){
+document.getElementById("door").style.transform="rotateY(-90deg)";
+
+setTimeout(function(){
+alert("✨ خوش اومدی سوگند ✨");
+},700);
+}
+</script>
 
 </body>
-
 </html>
