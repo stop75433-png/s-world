@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
+
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>خانه سوگند</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>خانه‌ی سلطنتی سوگند</title>
 
 <style>
+
 body{
 margin:0;
 background:#F5F0FF;
@@ -14,18 +18,30 @@ justify-content:center;
 align-items:center;
 height:100vh;
 font-family:tahoma;
+overflow:hidden;
 }
 
-img{
+#door{
 width:90%;
-max-width:420px;
+max-width:430px;
 cursor:pointer;
-transition:.5s;
+transition:1s;
+border-radius:25px;
+box-shadow:0 0 35px rgba(150,90,220,.35);
 }
 
-img:hover{
-transform:scale(1.03);
+#text{
+position:absolute;
+bottom:70px;
+font-size:32px;
+color:#8d63c7;
+font-weight:bold;
+background:white;
+padding:15px 35px;
+border-radius:50px;
+box-shadow:0 10px 25px rgba(0,0,0,.15);
 }
+
 </style>
 
 </head>
@@ -34,18 +50,47 @@ transform:scale(1.03);
 
 <img
 id="door"
-src="file_000000001ef47246a001ae12f0955ef4.png"
-onclick="openDoor()">
+src="file_000000001ef47246a001ae12f0955ef4.png">
+
+<div id="text">
+🚪 ورود به دنیای سوگند
+</div>
 
 <script>
-function openDoor(){
-document.getElementById("door").style.transform="rotateY(-90deg)";
+
+document.getElementById("door").onclick=function(){
+
+document.getElementById("door").style.transform="scale(1.08) rotateY(-80deg)";
+document.getElementById("door").style.opacity="0";
+
+document.getElementById("text").innerHTML="✨ خوش اومدی سوگند ✨";
 
 setTimeout(function(){
-alert("✨ خوش اومدی سوگند ✨");
-},700);
+
+document.body.innerHTML=`
+<div style="
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+background:#F5F0FF;
+font-family:tahoma;
+font-size:45px;
+color:#8d63c7;
+font-weight:bold;
+">
+
+🏡 خانه سوگند
+
+</div>
+`;
+
+},1200);
+
 }
+
 </script>
 
 </body>
+
 </html>
